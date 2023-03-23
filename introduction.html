@@ -6,28 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction</title>
     <style>
-        body{
+        *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            background-color: black;
+        }
+        body{
+            background-image: url("./images/Introduction_background.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            /* background-color: rgb(50, 50, 50); */
+            /* background-color: white; */
         }
         .content{
             width: calc(100vw * 1000/1440);
-            height: calc(100vw * 400/1440);
+            height: calc(100vw * 550/1440);
             margin-top: calc(100vw * 100/1440);
             margin-left:  calc(100vw * 220/1440);
             margin-bottom:  calc(100vw * 100/1440);
             margin-right:  calc(100vw * 220/1440);
+            padding: calc(100vw * 50/1440);
             border-radius: calc(100vw * 25/1440);
             /* margin: calc(100vw * 100/1440),calc(100vw * 220/1440),calc(100vw * 100/1440),calc(100vw * 220/1440); */
-            background-color: rgba(250, 250, 250, 0.5);
+            background-color: rgb(255, 255, 255, 0.25);
+            box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .content p{
+            text-indent: 2em;
+            font-size: calc(100vw * 30/1440);
+            font-weight: bold;
+            color: rgb(33, 33, 33);
         }
     </style>
 </head>
 <body>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
+    <div class="content">
+        <p>Imagine an interesting multimodal interactive scenario<br>
+    that you can see, hear, and chat with an AI-generated digital<br>
+    character, who is capable of behaving like Sheldon from The<br>
+    Big Bang Theory, as a DEEP copy from appearance to pers-<br>
+    onality. Towards this fantastic multimodal chatting scenario, <br>
+    we propose a novel task, named Deep Personalized Character Creation (DPCC).</p>
+    </div>
+    <div class="content">
+        <p>We expect to interact with an AI-generated personalized<br>
+        character, just feels like interacting with a specific person,<br>and the AI-generated character can respond to you with per-<br>sonalized text, voice and facial expression. By DEEP, we mean<br>not only mimicing the outer characteristics such as appearan-<br>ce and tune, but also the inner characteristics such as perso-<br>nality. Once we get a DEEP personalized Sheldon, one can<br>have a multimodal chat with him and feel like we are really ta-<br>lking to the one you know from The Big Bang Theory.</p>
+    </div>
+    <div class="content">
+        <p>DPCC takes the multimodal stimuli as input, and responds with a personalized multimodal output. Given the same input, different Deep personalized digital Characters should provide responses that well reflect their individual trait, respectively. With multi-modal response, Deep Characters can bring more concrete and immersive interactive experience, compared to previous chatbots, which can only provide text or voice resp-<br>onse. DPCC can also support text-only input and generate multi-modal response.</p>
+    </div>
+    <div class="content">
+        <p>To support DPCC task, we collect a multimodal conversation dataset, named Deep Personalized Character Dataset(DPCD). DPCD containing 5 main characters from The BigBang Theory, and in total 29.75 hours videos and 29k conversation turns.  We only collect the video clips containing characters’ talking face to extract effective facial expression features.There do exist multimodal datasets for natural language processing(NLP), audio-visual synchronization (AVS) and speech synthesis. These existing multimodal datasets are collected for a general understanding of conversation content, emotion, or general synthesis of speech and talking head that can be applied to different persons, not for modelling specific characters. But our DPCD focus on the main characters and can provide almost an order more (9,718 utterances per character). Besides, those datasets are often of low quality in terms of text/audio/video misalignment, noisy audio, and face missing.
+        </p>
+    </div>
 </body>
 </html>
