@@ -10,28 +10,94 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            text-decoration: none;
         }
         body{
+            position: relative;
             background-image: url("./images/Introduction_background.jpg");
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
             background-size: cover;
-            /* background-color: rgb(50, 50, 50); */
+            /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
+        .head{
+            position: absolute;
+            width: 100%;
+            height: calc(100vw * 150/1440);
+            left: 0;
+            top: 0;
+            /* background-image: url("./images/Introduction_background2.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+            /* z-index: 3; */
+            /* background-attachment: fixed; */
+        }
+        .wrap{
+            position: absolute;
+            /* height: calc(100vw * 600/1440); */
+            width: calc(100vw * 1280/1440);
+            top: calc(100vw * 150/1440);
+            margin-left:  calc(100vw * 80/1440);
+            margin-right:  calc(100vw * 80/1440);
+            margin-bottom: calc(100vw * 150/1440);
+            background-color: rgba(255, 255, 255, 0.55);
+            /* backdrop-filter: blur(20px); */
+            /* background-image: url("images/Introduction_background3.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+            
+        }
+
+        .navigation{
+            position: relative;
+            height: calc(100vw * 60/1440);
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: -webkit-flex;
+            display: flex;
+            /* background-color: rgba(23, 12, 12, 0.6); */
+            /* z-index: 1; */
+        }
+        span{
+            position: relative;
+            /* height: calc(100vw * 600/1440); */
+            width: 100%;
+            display: none;
+            /* top: calc(100vw * 60/1440); */
+            /* display: block; */
+            /* background-color: blue; */
+            /* z-index: 1; */
+        }
+        .main{
+            display: block;
+        }
+        .theme_title{
+            position: relative;
+            margin-top: calc(100vw * 80/1440);
+            margin-bottom: calc(100vw * 80/1440);
+            text-align: center;
+            font-size: calc(100vw * 60/1440);
+            font-weight: bolder;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
         .content{
-            width: calc(100vw * 1000/1440);
-            height: calc(100vw * 550/1440);
-            margin-top: calc(100vw * 100/1440);
-            margin-left:  calc(100vw * 220/1440);
+            position: relative;
+            width: calc(100vw * 980/1440);
+            /* height: calc(100vw * 550/1440); */
+            margin-top: calc(100vw * 80/1440);
+            margin-left:  calc(100vw * 150/1440);
             margin-bottom:  calc(100vw * 100/1440);
-            margin-right:  calc(100vw * 220/1440);
+            margin-right:  calc(100vw * 150/1440);
             padding: calc(100vw * 50/1440);
             border-radius: calc(100vw * 25/1440);
             /* margin: calc(100vw * 100/1440),calc(100vw * 220/1440),calc(100vw * 100/1440),calc(100vw * 220/1440); */
-            background-color: rgb(255, 255, 255, 0.25);
-            box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.7);
+            background-color: rgb(245, 245, 245);
+            box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.75);
             backdrop-filter: blur(20px);
         }
         .content p{
@@ -40,27 +106,159 @@
             font-weight: bold;
             color: rgb(33, 33, 33);
         }
+        ul{
+            /* position: relative; */
+            /* height: calc(100vw * 60/1440); */
+            display: flex;
+            font-size: 0;
+        }
+        li{
+            position: relative;
+            /* width: calc(100vw * 100/1440); */
+            height: 100%;
+            /* height: calc(100vw * 60/1440); */
+            text-align: center;
+            line-height: calc(100vw * 60/1440);
+            font-size: calc(100vw * 20/1440);
+            font-weight: bold;
+            color: white; 
+            background-color: rgba(60, 43, 43, 0.6);
+            /* display: inline-block; */
+            float: left;
+            padding-left: calc(100vw * 20/1440);
+            padding-right: calc(100vw * 20/1440);
+            list-style-type: none;
+        }
+        .navigation_holder{
+            position: relative;
+            /* list-style-type: none; */
+            /* height: 100%; */
+            height: calc(100vw * 60/1440);
+            width: 100%;
+            /* width: calc(100vw * 680/1440); */
+            display: flex;
+            /* align-content: stretch; */
+            /* float: right; */
+            /* width: calc(100vw * 250/1440); */
+            background-color: rgba(60, 43, 43, 0.6);
+        }
+        .icon1{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: 0;
+        }
+        .icon2{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: calc(100vw * 50/1440);
+        }
+        .icon3{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: calc(100vw * 100/1440);
+        }
+        .click_style{
+            background-color: rgba(0, 0, 0, 0);
+            /* background-color: rgba(0, 0, 0, 0.75); */
+            color: rgb(33, 33, 33);
+        }
     </style>
+        
+    <script>
+        window.onload = function(){
+        var my_li = document.getElementsByTagName("li");
+        var my_span = document.getElementsByTagName("span");
+        var i, j;
+        for(i=0; i<my_li.length; i++){
+            my_li[i].index = i
+            my_li[i].onclick = function(){
+                for(j=0; j<my_li.length; j++){
+                    my_li[j].className="";
+                    my_span[j].className="";
+                }
+                this.className += "click_style";
+                my_span[this.index].className += "main";
+            }
+        }
+    }
+    </script>
 </head>
 <body>
-    <div class="content">
-        <p>Imagine an interesting multimodal interactive scenario<br>
-    that you can see, hear, and chat with an AI-generated digital<br>
-    character, who is capable of behaving like Sheldon from The<br>
-    Big Bang Theory, as a DEEP copy from appearance to pers-<br>
-    onality. Towards this fantastic multimodal chatting scenario, <br>
-    we propose a novel task, named Deep Personalized Character Creation (DPCC).</p>
-    </div>
-    <div class="content">
-        <p>We expect to interact with an AI-generated personalized<br>
-        character, just feels like interacting with a specific person,<br>and the AI-generated character can respond to you with per-<br>sonalized text, voice and facial expression. By DEEP, we mean<br>not only mimicing the outer characteristics such as appearan-<br>ce and tune, but also the inner characteristics such as perso-<br>nality. Once we get a DEEP personalized Sheldon, one can<br>have a multimodal chat with him and feel like we are really ta-<br>lking to the one you know from The Big Bang Theory.</p>
-    </div>
-    <div class="content">
-        <p>DPCC takes the multimodal stimuli as input, and responds with a personalized multimodal output. Given the same input, different Deep personalized digital Characters should provide responses that well reflect their individual trait, respectively. With multi-modal response, Deep Characters can bring more concrete and immersive interactive experience, compared to previous chatbots, which can only provide text or voice resp-<br>onse. DPCC can also support text-only input and generate multi-modal response.</p>
-    </div>
-    <div class="content">
-        <p>To support DPCC task, we collect a multimodal conversation dataset, named Deep Personalized Character Dataset(DPCD). DPCD containing 5 main characters from The BigBang Theory, and in total 29.75 hours videos and 29k conversation turns.  We only collect the video clips containing characters’ talking face to extract effective facial expression features.There do exist multimodal datasets for natural language processing(NLP), audio-visual synchronization (AVS) and speech synthesis. These existing multimodal datasets are collected for a general understanding of conversation content, emotion, or general synthesis of speech and talking head that can be applied to different persons, not for modelling specific characters. But our DPCD focus on the main characters and can provide almost an order more (9,718 utterances per character). Besides, those datasets are often of low quality in terms of text/audio/video misalignment, noisy audio, and face missing.
-        </p>
+    <div class="head"></div>
+    <div class="wrap">
+        <div class="navigation">
+            <ul>
+                <li class="click_style">Abstract</li>
+                <li>Our&nbsp;Goals</li>
+                <li>About&nbsp;DPCC</li>
+                <li>About&nbsp;DPCD</li>
+                <li>BaseLine&nbsp;&&nbsp;Evaluation</li>
+                <li>Related&nbsp;Work</li>
+            </ul>
+            <div class="navigation_holder">
+                <img class="icon1" src="./images/guanbi.png" alt="">
+                <img class="icon2" src="./images/maximize.png" alt="">
+                <img class="icon3" src="./images/minimum.png" alt="">
+            </div>
+        </div>
+        <span class="main">
+            <div class="theme_title">ABSTRACT</div>
+            <div class="content">
+                <p> Imagine an interesting multimodal interactive scenariothat you can see, hear, and chat with an AI-generated digi-tal character, who is capable of behaving like Sheldon fromThe Big Bang Theory, as a DEEP copy from appearanceto personality. Towards this fantastic multimodal chattingscenario, we propose a novel task, named Deep Personal-ized Character Creation (DPCC): creating multimodal chatpersonalized characters from multimodal data such as TVshows. Specifically, given a single- or multi-modality in-put (text, audio, video), the goal of DPCC is to generate amulti-modality (text, audio, video) response, which shouldbe well-matched the personality of a specific character suchas Sheldon, and of high quality as well.</p>
+            </div>
+            <div class="content">
+                <p>To support thisnovel task, we further collect a character centric multi-modal dialogue dataset, named Deep Personalized Char-acter Dataset (DPCD), from TV shows. DPCD containscharacter-specific multimodal dialogue data of 10k utter-ances and 6 hours of audio/video per character, whichis around 10 times larger compared to existing relateddatasets. On DPCD, we present a baseline method for theDPCC task and create 5 Deep personalized digital Charac-ters (DeepCharacters) from Big Bang TV Shows. We con-duct both subjective and objective experiments to evaluatethe multimodal response from DeepCharacters in terms ofcharacterization and quality. The results demonstrates that,on our collected DPCD dataset, the proposed baseline cancreate personalized digital characters for generating multi-modal response. </p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">OUR&nbsp;GOALS</div>
+            <div class="content">
+                <p> We expect to interact with an AI-generated per-sonalized character, just feels like interacting with a specificperson, and the AI-generated character can respond to youwith personalized text, voice and facial expression. Insteadof creating a totally factitious character from manual set-tings, in this project, we are heading for a novel setting: cre-ating aDEEPpersonalized specific character from his/herdialog videos providing textual, vocal and visual data. ByDEEP, we mean not only mimicing theoutercharacteristicssuch as appearance and tune, but also theinnercharacteris-tics such as personality. Once we get aDEEPpersonalizedSheldon (DeepSheldon), one can have a multimodal chatwith him and feel like we are really talking to the one youknow from The Big Bang Theory. </p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">ABOUT&nbsp;DPCC</div>
+            <div class="content">
+                <p>Towards our fantastic goal, we propose a novel task,named Deep Personalized Character Creation (DPCC), as generating a personalized character from the multimodalconversation data including text, audio, and video. DPCC takes the multimodal stimuli asinput, and responds with a personalized multimodal output.Given the same input, different Deep personalized digitalCharacters (DeepCharacters) should provide responses thatwell reflect their individual trait, respectively. With multi-modal response, DeepCharacters can bring more concreteand immersive interactive experience, compared to previ-ous chatbots, which can only provide text or voice response.DPCC can also support text-only input and generate multi-modal response. Also, different from previous personalizedconversation generation tasks, our DPCC doesn’t requireadditional profiles or traits as input to explicitly label per-sonality, and learn the character’s interaction pattern, speak-ing style and personality from conversation contexts.</p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">ABOUT&nbsp;DPCD</div>
+            <div class="content">
+                <p>To support DPCC task, we collect a multimodal conver-sation dataset, named Deep Personalized Character Dataset(DPCD). DPCD containing 5 main characters fromThe BigBang Theory1, and in total 29.75 hours videos and 29k con-versation turns. We only collect the video clips contain-ing characters’ talking face to extract effective facial ex-pression features. Besides, we manually check the auto-alignment between text and audio/video modality. We alsoconduct preprocessing to remove noise in audio. Thoseefforts ensure the collected data is of high quality forDPCC task. There do exist multimodal (text, audio, video)datasets for natural language processing(NLP), audio-visual synchronization (AVS) and speech syn-thesis. These existing multimodal datasets are collected fora general understanding of conversation content, emotion,or general synthesis of speech and talking head that can beapplied to different persons, not for modelling specific char-acters. Consequently, the data for modeling the personalityof a specific character is typically insufficient. For somedatasets, the character labels of conversations are even notprovided. But our DPCD focus on the main charac-ters and can provide almost an order more (9,718 utterancesper character). </p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">BASELINE&nbsp;&&nbsp;EVALUATION</div>
+            <div class="content">
+                <p>We present a baseline solution for DPCC task and cre-ate 5 DeepCharacters from the collected DPCD. To evaluatethe textual and multimodal response from DeepCharactersin terms of characterization and quality, we design some tools to evaluate the characterization quality. Both subjec-tive and objective experimental results demonstrate that theresponse of our created DeepCharacters can well reflect thepersonality of characters, indicating DPCD can be used forDPCC task.</p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">RELATED&nbsp;WORK</div>
+            <div class="content">
+                <p>Modeling personalized conversation has long been acomplicated issue. 
+                    Li et al.[18] address the challenge of per-sona consistency by encoding personas and adding personaembeddings into seq2seq model. They generate persona-specific responses based on the conversations of 13 char-acters from TV seriesFriendsandThe Big Bang Theory.
+                    Based on the persona-based model by Li et al.[18], Xing etal.[45] estimate the OCEAN scores for each speaker to trainpersona embedding.</p>
+            </div>
+            <div class="content">
+                <p>Considering the difficulty and complexity of persona-based conversation modeling, many models rely on extra profile or personality traits to develop a sense of per-sona. 
+                    Mazar ́e et al.[21] define persona as a set of sen-tences representing the personality of the responding agentand train persona-based dialogue models on a large-scalepersona-based dialogue dataset (PCR) extracted from RED-DIT2. 
+                    Zhong et al.[53] further extend PCR with annotatedempathy information. 
+                    Zheng et al.[52] build a persona-based empathetic conversation response selection modelfrom amounts of multi-turn empathetic conversation datawith five personality annotations (i.e.Gender, Age, Loca-tion, Interest Tags, and Self-description) for each speaker.
+                    Wu et al.[44] propose a generative split memory network toincorporate diverse personal information and generate per-sonalized responses based on a personalized dataset PER-CHAT with finer-grained user personal information andcontextual comments. 
+                    Chen et al. [7] build the personalitydetection and emotion recognition model from a Chinesepersonalized dataset CPED with annotations of speakers’personalities, dynamic emotions and dialog actions.</p>
+            </div>
+            <div class="content">
+                <p>Constrained by the lack of single speaker’s conversationdata and the complexity of personality modeling, the mod-els listed above mainly focus on personal information con-sistency rather than character consistency, and rely heavilyon detailed profiles. Different from them, we directly train adeep personalized character model from a rather larger vol-ume of multimodal conversation data for a single speaker.Detailed comparisons of our multimodal dataset DPCD tothe related datasets are presented in Table 1 in Section 3.2.</p>
+            </div>
+        </span>
     </div>
 </body>
 </html>
