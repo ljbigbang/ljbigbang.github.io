@@ -4,41 +4,237 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Related Work</title>
+    <title>Introduction</title>
     <style>
-        body{
+        *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            text-decoration: none;
+        }
+        body{
+            position: relative;
             background-image: url("./images/Introduction_background.jpg");
             background-repeat: no-repeat;
             background-position: center center;
             background-attachment: fixed;
             background-size: cover;
-            /* background-color: rgb(50, 50, 50); */
+            /* display: flex; */
+            /* padding-bottom: calc(100vw * 100/1440); */
+            /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
+        .head{
+            position: relative;
+            width: 100%;
+            height: calc(100vw * 150/1440);
+            left: 0;
+            top: 0;
+            /* background-image: url("./images/Introduction_background2.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+            /* z-index: 3; */
+            /* background-attachment: fixed; */
+        }
+        .wrap{
+            position: relative;
+            /* height: calc(100vw * 600/1440); */
+            width: calc(100vw * 1280/1440);
+            /* top: calc(100vw * 150/1440); */
+            margin-left:  calc(100vw * 80/1440);
+            margin-right:  calc(100vw * 80/1440);
+            margin-bottom: calc(100vw * 80/1440);
+            background-color: rgba(255, 255, 255, 0.55);
+            /* backdrop-filter: blur(20px); */
+            /* background-image: url("images/Introduction_background3.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+        .navigation{
+            position: relative;
+            height: calc(100vw * 60/1440);
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: -webkit-flex;
+            display: flex;
+            /* background-color: rgba(23, 12, 12, 0.6); */
+            /* z-index: 1; */
+        }
+        span{
+            position: relative;
+            /* height: calc(100vw * 600/1440); */
+            width: 100%;
+            padding-bottom: calc(100vw * 10/1440);
+            display: none;
+            /* top: calc(100vw * 60/1440); */
+            /* display: block; */
+            /* background-color: blue; */
+            /* z-index: 1; */
+        }
+        .main{
+            display: block;
+        }
+        .theme_title{
+            position: relative;
+            margin-top: calc(100vw * 80/1440);
+            margin-bottom: calc(100vw * 80/1440);
+            text-align: center;
+            font-size: calc(100vw * 80/1440);
+            font-weight: bolder;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
         .content{
-            width: calc(100vw * 1000/1440);
-            height: calc(100vw * 200/1440);
-            margin-top: calc(100vw * 60/1440);
-            margin-left:  calc(100vw * 220/1440);
-            margin-bottom:  calc(100vw * 60/1440);
-            margin-right:  calc(100vw * 220/1440);
+            position: relative;
+            width: calc(100vw * 980/1440);
+            /* height: calc(100vw * 550/1440); */
+            margin-top: calc(100vw * 80/1440);
+            margin-left:  calc(100vw * 150/1440);
+            margin-bottom:  calc(100vw * 100/1440);
+            margin-right:  calc(100vw * 150/1440);
+            padding: calc(100vw * 50/1440);
             border-radius: calc(100vw * 25/1440);
             /* margin: calc(100vw * 100/1440),calc(100vw * 220/1440),calc(100vw * 100/1440),calc(100vw * 220/1440); */
-            background-color: rgb(255, 255, 255, 0.25);
-            box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.7);
+            background-color: rgb(245, 245, 245);
+            box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.75);
             backdrop-filter: blur(20px);
         }
+        .content p{
+            text-indent: 2em;
+            font-size: calc(100vw * 30/1440);
+            font-weight: bold;
+            color: rgb(33, 33, 33);
+        }
+        ul{
+            /* position: relative; */
+            /* height: calc(100vw * 60/1440); */
+            display: flex;
+            font-size: 0;
+        }
+        li{
+            position: relative;
+            /* width: calc(100vw * 100/1440); */
+            /* height: 100%; */
+            height: calc(100vw * 60/1440);
+            text-align: center;
+            line-height: calc(100vw * 60/1440);
+            font-size: calc(100vw * 20/1440);
+            font-weight: bold;
+            color: white; 
+            background-color: rgba(60, 43, 43, 0.6);
+            /* display: inline-block; */
+            float: left;
+            padding-left: calc(100vw * 20/1440);
+            padding-right: calc(100vw * 20/1440);
+            list-style-type: none;
+        }
+        .navigation_holder{
+            position: relative;
+            /* list-style-type: none; */
+            /* height: 100%; */
+            height: calc(100vw * 60/1440);
+            width: 100%;
+            /* width: calc(100vw * 680/1440); */
+            display: flex;
+            /* align-content: stretch; */
+            /* float: right; */
+            /* width: calc(100vw * 250/1440); */
+            background-color: rgba(60, 43, 43, 0.6);
+        }
+        .icon1{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: 0;
+        }
+        .icon2{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: calc(100vw * 50/1440);
+        }
+        .icon3{
+            position: absolute;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 30/1440);
+            margin: calc(100vw * 15/1440);
+            right: calc(100vw * 100/1440);
+        }
+        .click_style{
+            background-color: rgba(0, 0, 0, 0);
+            /* background-color: rgba(0, 0, 0, 0.75); */
+            color: rgb(33, 33, 33);
+        }
     </style>
+        
+    <script>
+        window.onload = function(){
+        var my_li = document.getElementsByTagName("li");
+        var my_span = document.getElementsByTagName("span");
+        var i, j;
+        for(i=0; i<my_li.length; i++){
+            my_li[i].index = i
+            my_li[i].onclick = function(){
+                for(j=0; j<my_li.length; j++){
+                    my_li[j].className="";
+                    my_span[j].className="";
+                }
+                this.className += "click_style";
+                my_span[this.index].className += "main";
+            }
+        }
+    }
+    </script>
 </head>
 <body>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
+    <div class="head"></div>
+    <div class="wrap">
+        <div class="navigation">
+            <ul>
+                <li class="click_style">Overview</li>
+                <li>Exploration</li>
+                <li>Difference</li>
+            </ul>
+            <div class="navigation_holder">
+                <img class="icon1" src="./images/guanbi.png" alt="">
+                <img class="icon2" src="./images/maximize.png" alt="">
+                <img class="icon3" src="./images/minimum.png" alt="">
+            </div>
+        </div>
+        <span class="main">
+            <div class="theme_title">OVERVIEW</div>
+            <div class="content">
+                <p> Our goal is to collect character-centric multimodal con-versations, from raw videos, audio, transcripts, and subtitlesfrom the TV show. We chooseThe Big Bang Theoryas aexample in this paper, for its large number of episodes. Thecollected items should well reflect the characters’ clean con-tents including facial expressions, vocals and texts. Mean-while, this content should be paired and temporally wellaligned to allow cross-modality integration. To conductsuch a large scale data collection and ensure high quality,we adopt an automatic and manual mixed operation as fol-lows: 1) For each modality, we use automatic tools to ex-tract the basic feature, reduce the noise, and roughly alignmodalities. 2) Manually check the quality of the alignmentbetween text and audio/video modality. </p>
+            </div>
+            <div class="content">
+                <p>During the auto-matic processing, for videos, we recognize and track thespeaking face, then verify the active speaker and annotateits identity. For audio, we use multiple filters and acoustictool kits to reduce background noise and enhance vocals,and we also remove laughter from the audience to get cleanacoustic signals. As for the text, we clean and align thetranscripts and subtitles through textual similarity compu-tation. For feature extraction, we use OpenFace3to extractfacial expression features, COVAREP4to extract acousticfeatures, and DialoGPT tokenizer[51] to get word embed-dings. Finally, we align all three modalities according tothe starting and ending timestamps. Thanks to the manualefforts, the final dataset includes well-aligned visual, au-dio, and textual modalities for each utterance, as well as thespeaker identity and conversational contexts. </p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">EXPLORATION</div>
+            <div class="content">
+                <p> We collect single utterances that are perfectly alignedwith corresponding audios to train speech synthesis models.We collect 48,589 utterances from 5 characters (Sheldon,Leonard, Penny, Howard, Raj), each utterance contains 7.06words and lasts 2.20s on average. Since we divide sentenceson the basis of subtitles, the average duration for an utter-ance is relatively short. However, the total duration of audiois 29.65h, reaching a volume qualified for speech synthesistask[32, 31, 6]. </p>
+            </div>
+            <div class="content">
+                <p> We also maintain complete conversational order of theutterances, and extract mono conversation turns as an exam-ple. Using these conversation data, we can learn character’sinteraction pattern and speaking style, and try to model thatcharacter’s personality.  </p>
+            </div>
+        </span>
+        <span>
+            <div class="theme_title">DIFFERENCE</div>
+            <div class="content">
+                <p>According to the targeting tasks,we roughly divide the multimodal datasets into three cate-gories for natural language processing (NLP), audio-visualsynchronization (AVS) and speech synthesis, respectively. All of the existing multimodal datasets are always collected to qualify a specifictask in a single field, hence leaving some modalities of poorquality. With the total scale of data increasing, the data sizefor each character is often ignored.</p>
+            </div>
+            <div class="content">
+                <p>Different from most multimodal datasets targeting NLPtasks, the videos and audios offered by our DPCD datasetare more informative and clean. Our videos are specif-ically cropped to focus on active talking face, excludingother characters and complicated background scenes. Sothe visual features extracted from these video crops canbetter represent facial expressions and the speaker’s emo-tions, free from possible environmental noises. The audiosin our dataset are also elaborately filtered to better capturethe speaker’s voice and tone. Compared with many audio-visual datasets, our texts are labeled with speaker identityand conversational context, available for further expressionand emotion modeling. In this way, our dataset DPCD isqualified for tasks in the fields such as natural language pro-cessing, audio-visual synchronization and speech synthesis.</p>
+            </div>
+            <div class="content">
+                <p>Furthermore, as mentioned above, our DPCD datasetmainly focuses on 5 characters, detailed statistics for eachcharacter are presented in Table 3. It is obvious, from thetable, that our dataset offers a competitively large volumeof data for a single character. Sheldon acted as a respondentin 8,564 mono conversation turns, each containing about17.32 words. While Penny participates in 5,566 conversa-tion turns, each containing about 12.05 words. The averageutterance audio duration per character reaches 5.93h, aver-age utterance number per character reaches 9,717.8, greatlyexceeding all the existing multimodal datasets. This rela-tively large volume of character data makes it possible tomodel personality through multimodal inputs. To be spe-cific, as we offer sufficient utterance data and conversationaldata, it is possible to model the character’s speaking man-ner and interaction habits. With hours of audio tracks, onecan capture the character’s voice and tone to build a per-sonalized speech synthesis model. One can also rebuild thecharacter’s visual image or 3D model from the video clips,and analyze the character’s facial expression tendency dur-ing the conversation.</p>
+            </div>
+        </span>
+    </div>
 </body>
 </html>

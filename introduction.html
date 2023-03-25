@@ -19,11 +19,13 @@
             background-position: center center;
             background-attachment: fixed;
             background-size: cover;
+            /* display: flex; */
+            /* padding-bottom: calc(100vw * 100/1440); */
             /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
         .head{
-            position: absolute;
+            position: relative;
             width: 100%;
             height: calc(100vw * 150/1440);
             left: 0;
@@ -36,22 +38,20 @@
             /* background-attachment: fixed; */
         }
         .wrap{
-            position: absolute;
+            position: relative;
             /* height: calc(100vw * 600/1440); */
             width: calc(100vw * 1280/1440);
-            top: calc(100vw * 150/1440);
+            /* top: calc(100vw * 150/1440); */
             margin-left:  calc(100vw * 80/1440);
             margin-right:  calc(100vw * 80/1440);
-            margin-bottom: calc(100vw * 150/1440);
+            margin-bottom: calc(100vw * 80/1440);
             background-color: rgba(255, 255, 255, 0.55);
             /* backdrop-filter: blur(20px); */
             /* background-image: url("images/Introduction_background3.jpg"); */
             /* background-repeat: no-repeat; */
             /* background-position: center center; */
             /* background-size: cover; */
-            
         }
-
         .navigation{
             position: relative;
             height: calc(100vw * 60/1440);
@@ -67,6 +67,7 @@
             position: relative;
             /* height: calc(100vw * 600/1440); */
             width: 100%;
+            padding-bottom: calc(100vw * 10/1440);
             display: none;
             /* top: calc(100vw * 60/1440); */
             /* display: block; */
@@ -81,7 +82,7 @@
             margin-top: calc(100vw * 80/1440);
             margin-bottom: calc(100vw * 80/1440);
             text-align: center;
-            font-size: calc(100vw * 60/1440);
+            font-size: calc(100vw * 80/1440);
             font-weight: bolder;
             font-family: 'Arial Narrow', Arial, sans-serif;
         }
@@ -115,8 +116,8 @@
         li{
             position: relative;
             /* width: calc(100vw * 100/1440); */
-            height: 100%;
-            /* height: calc(100vw * 60/1440); */
+            /* height: 100%; */
+            height: calc(100vw * 60/1440);
             text-align: center;
             line-height: calc(100vw * 60/1440);
             font-size: calc(100vw * 20/1440);
