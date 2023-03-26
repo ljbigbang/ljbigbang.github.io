@@ -15,6 +15,95 @@
         body{
             background-color: rgb(243, 237, 237);
         }
+        .title_navig{
+            position: absolute;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 4;
+            /* visibility: hidden; */
+        }
+        .title_navig_logo{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+            top: calc(100vw * 20/1440);
+            left: calc(100vw * 20/1440);
+            z-index: 5;
+        }
+        .title_navig_logo1{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 90/1440);
+            top: calc(100vw * 23/1440);
+            left: calc(100vw * 75/1440);
+            z-index: 5;
+        }
+        .title_navig_logo2{
+            position: absolute;
+            height: calc(100vw * 80/1440);
+            width: calc(100vw * 80/1440);
+            padding: calc(100vw * 20/1440);
+            top: 0;
+            right: 0;
+            z-index: 5;
+            display: block;
+            /* background-image: url("./images/icon_mulu.png"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+        .title_navig_logo2 img{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+        }
+        .directory{
+            position: absolute;
+            height: calc(100vw * 120/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 80/1440);
+            right: 0;
+            visibility: hidden;
+            /* display: none; */
+            z-index: 5;
+            font-size: calc(100vw * 20/1440);
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            list-style-type: none;
+        }
+        .title_navig_logo2:hover .directory{
+            visibility: visible;
+        }
+        .my_video{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: 0;
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_video:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .my_blogs{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 60/1440);
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_blogs:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
         .box1{
             position: absolute;
             top: 0;
@@ -126,6 +215,17 @@
     </style>
 </head>
 <body>
+    <div class="title_navig">
+        <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
+        <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
+        <div class="title_navig_logo2">
+            <img src="./images/icon_mulu.png" alt="">
+            <div class="directory">
+                <div class="my_video">OUR VIDEO</div>
+                <div class="my_blogs">OUR BLOGS</div>
+            </div>
+        </div>
+    </div>
     <div class="box1">
         <!-- <img class="big_bang" src="./bigbang.jpg" alt=""> -->
     </div>
@@ -139,15 +239,15 @@
             <div class="images"><img src="./images/jianjie.png" alt=""></div>
             <span>Introduction</span>
         </a>
-        <a href="./related_work.html" class="options">
+        <a href="./dataset.html" class="options">
             <div class="images"><img src="./images/shuju.png" alt=""></div>
             <span>DataSet</span>
         </a>
-        <a href="#" class="options">
+        <a href="./baseline.html" class="options">
             <div class="images"><img src="./images/gongzuo.png" alt=""></div>
             <span>BaseLine</span>
         </a>
-        <a href="#" class="options1">
+        <a href="./experiment.html" class="options1">
             <div class="images"><img src="./images/shiyan.png" alt=""></div>
             <span>Experiment</span>
         </a>

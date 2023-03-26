@@ -24,18 +24,130 @@
             /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
+        .title_navig{
+            position: fixed;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 4;
+            /* visibility: hidden; */
+        }
+        .title_navig_logo{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+            top: calc(100vw * 20/1440);
+            left: calc(100vw * 20/1440);
+            z-index: 5;
+        }
+        .title_navig_logo1{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 90/1440);
+            top: calc(100vw * 23/1440);
+            left: calc(100vw * 75/1440);
+            z-index: 5;
+        }
+        .title_navig_logo2{
+            position: absolute;
+            height: calc(100vw * 80/1440);
+            width: calc(100vw * 80/1440);
+            padding: calc(100vw * 20/1440);
+            top: 0;
+            right: 0;
+            z-index: 5;
+            display: block;
+            /* background-image: url("./images/icon_mulu.png"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+        .title_navig_logo2 img{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+        }
+        .directory{
+            position: absolute;
+            height: calc(100vw * 120/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 80/1440);
+            right: 0;
+            visibility: hidden;
+            /* display: none; */
+            z-index: 5;
+            font-size: calc(100vw * 20/1440);
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            list-style-type: none;
+        }
+        .title_navig_logo2:hover .directory{
+            visibility: visible;
+        }
+        /* .title_navig_logo2:hover .my_video{
+            visibility: visible;
+        }
+        .title_navig_logo2:hover .my_blogs{
+            visibility: visible;
+        } */
+        .my_video{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: 0;
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_video:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .my_blogs{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 60/1440);
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_blogs:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
         .head{
             position: relative;
-            width: 100%;
+            /* width: 100%; */
             height: calc(100vw * 150/1440);
-            left: 0;
-            top: 0;
+            /* left: 0; */
+            /* top: 0; */
             /* background-image: url("./images/Introduction_background2.jpg"); */
             /* background-repeat: no-repeat; */
             /* background-position: center center; */
             /* background-size: cover; */
             /* z-index: 3; */
             /* background-attachment: fixed; */
+        }
+        .section_title{
+            position: absolute;
+            top: calc(100vw * 35/1440);
+            left: calc(100vw * 520/1440);
+            height: calc(100vw * 80/1440);
+            width: calc(100vw * 400/1440);
+            text-align: center;
+            line-height: calc(100vw * 70/1440);
+            color: white;
+            border: 5px solid white;
+            font-size: calc(100vw * 35/1440);
+            font-weight: bolder;
+        }
+        .section_title:hover{
+            background-color: white;
+            color: black;
         }
         .wrap{
             position: relative;
@@ -191,7 +303,20 @@
     </script>
 </head>
 <body>
-    <div class="head"></div>
+    <div class="title_navig">
+        <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
+        <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
+        <div class="title_navig_logo2">
+            <img src="./images/icon_mulu.png" alt="">
+            <div class="directory">
+                <div class="my_video">OUR VIDEO</div>
+                <div class="my_blogs">OUR BLOGS</div>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="section_title">Introduction</div>
+    </div>
     <div class="wrap">
         <div class="navigation">
             <ul>

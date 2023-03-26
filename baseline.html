@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaseLine</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+        body{
+            position: relative;
+            /* background-image: url("./images/Introduction_background1.jpg"); */
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+            /* display: flex; */
+            /* padding-bottom: calc(100vw * 100/1440); */
+            /* background-color: rgba(15, 15, 15, 0.9); */
+            /* background-color: white; */
+        }
+        .title_navig{
+            position: fixed;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 4;
+            /* visibility: hidden; */
+        }
+        .title_navig_logo{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+            top: calc(100vw * 20/1440);
+            left: calc(100vw * 20/1440);
+            z-index: 5;
+        }
+        .title_navig_logo1{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 90/1440);
+            top: calc(100vw * 23/1440);
+            left: calc(100vw * 75/1440);
+            z-index: 5;
+        }
+        .title_navig_logo2{
+            position: absolute;
+            height: calc(100vw * 80/1440);
+            width: calc(100vw * 80/1440);
+            padding: calc(100vw * 20/1440);
+            top: 0;
+            right: 0;
+            z-index: 5;
+            display: block;
+            /* background-image: url("./images/icon_mulu.png"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+        .title_navig_logo2 img{
+            position: absolute;
+            height: calc(100vw * 40/1440);
+            width: calc(100vw * 40/1440);
+        }
+        .directory{
+            position: absolute;
+            height: calc(100vw * 120/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 80/1440);
+            right: 0;
+            visibility: hidden;
+            /* display: none; */
+            z-index: 5;
+            font-size: calc(100vw * 20/1440);
+            font-weight: bolder;
+            color: white;
+            text-align: center;
+            list-style-type: none;
+        }
+        .title_navig_logo2:hover .directory{
+            visibility: visible;
+        }
+        /* .title_navig_logo2:hover .my_video{
+            visibility: visible;
+        }
+        .title_navig_logo2:hover .my_blogs{
+            visibility: visible;
+        } */
+        .my_video{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: 0;
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_video:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .my_blogs{
+            position: absolute;
+            height: calc(100vw * 60/1440);
+            width: calc(100vw * 150/1440);
+            top: calc(100vw * 60/1440);
+            line-height: calc(100vw * 60/1440);
+            background-color: rgba(0, 0, 0, 0.6);
+            /* display: none; */
+            /* visibility: hidden; */
+        }
+        .my_blogs:hover{
+            background-color: rgba(255, 255, 255, 0.6);
+            color: black;
+        }
+        .navigation{
+            position: fixed;
+            height: 100%;
+            /* width: calc(100vw * 440/1440); */
+            width: 30%;
+            /* border-radius: calc(100vw * 25/1440); */
+            background-color: rgba(0, 0, 0, 0.8);
+            left: 0;
+            display: inline-block;
+            color: white;
+            /* top: 0; */
+            /* background-image: url("./images/Introduction_background2.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+            /* z-index: 3; */
+            /* background-attachment: fixed; */
+        }
+        .navigation_title{
+            position: relative;
+            height: calc(100vw * 180/1440);
+            width: calc(100vw * 300/1440);
+            display: flex;
+            /* border: calc(100vw * 5/1440) solid white; */
+            margin-top: calc(100vw * 65/1440);
+            margin-left: calc(100vw * 40/1440);
+            /* padding-bottom: calc(100vw * 50/1440); */
+            /* background-color: rgb(30, 30, 30); */
+            font-size: calc(100vw * 65/1440);
+            font-weight: bolder;
+            /* text-align: center; */
+            line-height: calc(100vw * 200/1440);
+            /* border-radius: calc(100vw * 25/1440); */
+        }
+        li{
+            position: relative;
+            height: calc(100vw * 30/1440);
+            width: calc(100vw * 365/1440);
+            display: flex;
+            margin-left: calc(100vw * 40/1440);
+            margin-top: calc(100vw * 5/1440);
+            margin-bottom: calc(100vw * 10/1440);
+            font-size: calc(100vw * 17/1440);
+            font-weight: bolder;
+            line-height: calc(100vw * 20/1440);
+        }
+        li:hover{
+            color: rgb(223, 179, 17);
+        }
+        .wrap{
+            position: relative;
+            /* height: 100%; */
+            width: calc(100vw * 1000/1440);
+            float: right;
+            /* top: calc(100vw * 150/1440); */
+            /* margin-left:  calc(100vw * 80/1440); */
+            /* margin-right:  calc(100vw * 80/1440); */
+            /* margin-bottom: calc(100vw * 80/1440); */
+            /* background-color: rgba(255, 255, 255, 0.55); */
+            /* backdrop-filter: blur(20px); */
+            /* background-image: url("images/Introduction_background3.jpg"); */
+            /* background-repeat: no-repeat; */
+            /* background-position: center center; */
+            /* background-size: cover; */
+        }
+        .content_img{
+            position: relative;
+            width: calc(100vw * 800/1440);
+            /* height: calc(100vw * 550/1440); */
+            margin-left: calc(100vw * 100/1440);
+            margin-right: calc(100vw * 100/1440);
+            margin-top: calc(100vw * 30/1440);
+            margin-bottom: calc(100vw * 80/1440);
+            border: calc(100vw * 5/1440) solid rgb(87, 87, 87);
+            border-radius: calc(100vw * 25/1440);
+        }
+        .content{
+            position: relative;
+            width: calc(100vw * 800/1440);
+            /* height: calc(100vw * 550/1440); */
+            margin-left: calc(100vw * 100/1440);
+            margin-right: calc(100vw * 100/1440);
+            margin-bottom: calc(100vw * 50/1440);
+            /* padding: calc(100vw * 50/1440); */
+            /* border-radius: calc(100vw * 25/1440); */
+            /* background-color: rgb(245, 245, 245); */
+            /* box-shadow: 10px 10px 32px 0 rgb(0, 0, 0, 0.75); */
+            /* backdrop-filter: blur(20px); */
+        }
+        .content p{
+            /* text-indent: 2em; */
+            font-size: calc(100vw * 20/1440);
+            font-weight: bold;
+            color: rgb(87, 87, 87);
+        }
+    </style>
+    <script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function get(e){
+            $("html,body").animate({
+                scrollTop:$("#" + e).offset().top - 350},1000);
+        }
+    </script>
+</head>
+<body>
+    <div class="title_navig">
+        <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
+        <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
+        <div class="title_navig_logo2">
+            <img src="./images/icon_mulu.png" alt="">
+            <div class="directory">
+                <div class="my_video">OUR VIDEO</div>
+                <div class="my_blogs">OUR BLOGS</div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="navigation_title">BaseLine</div>
+        <ul>
+            <li onclick="get(1)">Multimodal Features Encoding</li>
+            <li onclick="get(2)">Personalized Textual Response Generation</li>
+            <li onclick="get(3)">Personalized Text to Speech</li>
+            <li onclick="get(4)">Acoustic-Visual Synchronization</li>
+        </ul>
+    </div>
+    <div class="wrap">
+        <!-- <video  class="content" src="./images/3137_DPCC_supp.mp4" controls loop></video> -->
+        <img class="content_img" src="./images/baseline.png" alt="">
+        <div class="content" id="1">
+            <p style="font-size: calc(100vw * 30/1440);">MULTIMODAL FEATURES ENCODING</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We train a multi-modal feature representation model to capture each modal-ity’s distinctive stylistic information. Following MISA[13],one-dimensional semantic features are previously extractedfrom each utterance or audio/video clip, then projected intoa modality-specific space utilizing feature projection model Ep.Epis pretrained on a multimodal emotion recognitiontask[3, 48] for better understanding in multimodal correla-tion. The textual/acoustic/visual features are encoded byEpto form multimodal conversation context input ut,a,v.</p>
+        </div>
+        <div class="content" id="2">
+            <p style="font-size: calc(100vw * 30/1440);">PERSONALIZED TEXTUAL RESPONSE GENERATION</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We fine-tune the pretrained model conversational response genera-tion DialoGPT[51] on a single character’s multimodal con-versation context inputut,a,vto model his personalized in-teraction pattern and speaking style and finally generate thespecific character’s possible response to the multimodal in-put context.</p>
+        </div>
+        <div class="content" id="3">
+            <p style="font-size: calc(100vw * 30/1440);">PERSONALIZED TEXT TO SPEECH</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We use the TTS modelproposed by Jia et al.[16] to utter the generated textual re-sponse in the target character’s voice and tone. For eachcharacter, the TTS model is finetuned on wave files andutterances collected from that specific character to captureunique speech patterns.</p>
+        </div>
+        <div class="content" id="4">
+            <p style="font-size: calc(100vw * 30/1440);">ACOUSTIC-VISUAL SYNCHRONIZATION</p>
+            <p style="margin-top: calc(100vw * 12/1440);">Utilizing theacoustic-visual synchronization model, we synthesize ourgenerated textual response and corresponding audio to thefinal multimodal response. We adopt the pretrained Pose-Controllable Talking Face Generation Model(PC-AVS) pro-posed by Zhou et al[54]. The identity reference and posereference are randomly selected from the target character’svideo clips and lip movements are synchronized with thewave file generated by the personalized speech synthesismodel. In this way, all generated modalities are aligned andsynthesized to a final multimodal personalized response.</p>
+        </div>
+    </div>
+</body>
+</html>
