@@ -24,13 +24,23 @@
             /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
+        .title_navig_wrap{
+            position: fixed;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            z-index: 5;
+            display: block;
+        }
+        .title_navig_wrap:hover .title_navig{
+            display: block;
+        }
         .title_navig{
             position: fixed;
             width: 100%;
             height: calc(100vw * 80/1440);
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 4;
-            /* visibility: hidden; */
+            display: none;
         }
         .title_navig_logo{
             position: absolute;
@@ -224,16 +234,18 @@
     </script>
 </head>
 <body>
+    <div class="title_navig_wrap">
     <div class="title_navig">
         <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
         <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
         <div class="title_navig_logo2">
             <img src="./images/icon_mulu.png" alt="">
             <div class="directory">
-                <div class="my_video">OUR VIDEO</div>
+                <div class="my_video" onClick="window.location.href = './index.html'; window.event.returnValue = false;">OUR VIDEO</div>
                 <div class="my_blogs">OUR BLOGS</div>
             </div>
         </div>
+    </div>
     </div>
     <div class="navigation">
         <div class="navigation_title">BaseLine</div>
@@ -249,19 +261,19 @@
         <img class="content_img" src="./images/baseline.png" alt="">
         <div class="content" id="1">
             <p style="font-size: calc(100vw * 30/1440);">MULTIMODAL FEATURES ENCODING</p>
-            <p style="margin-top: calc(100vw * 12/1440);">We train a multi-modal feature representation model to capture each modal-ity’s distinctive stylistic information. Following MISA[13],one-dimensional semantic features are previously extractedfrom each utterance or audio/video clip, then projected intoa modality-specific space utilizing feature projection model Ep.Epis pretrained on a multimodal emotion recognitiontask[3, 48] for better understanding in multimodal correla-tion. The textual/acoustic/visual features are encoded byEpto form multimodal conversation context input ut,a,v.</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We train a multimodal feature representation model to capture each modality’s distinctive stylistic information. Following MISA, one-dimensional semantic features are previously extracted from each utterance or audio/video clip, then projected into a modality-specific space utilizing feature projection model Ep. Ep is pretrained on a multimodal emotion recognition task for better understanding in multimodal correlation. The textual/acoustic/visual features are encoded by Ep to form multimodal conversation context input ut,a,v.</p>
         </div>
         <div class="content" id="2">
             <p style="font-size: calc(100vw * 30/1440);">PERSONALIZED TEXTUAL RESPONSE GENERATION</p>
-            <p style="margin-top: calc(100vw * 12/1440);">We fine-tune the pretrained model conversational response genera-tion DialoGPT[51] on a single character’s multimodal con-versation context inputut,a,vto model his personalized in-teraction pattern and speaking style and finally generate thespecific character’s possible response to the multimodal in-put context.</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We finetune the pretrained model conversational response generation DialoGPT on a single character’s multimodal conversation context input ut,a,v to model his personalized interaction pattern and speaking style and finally generate the specific character’s possible response to the multimodal input context.</p>
         </div>
         <div class="content" id="3">
             <p style="font-size: calc(100vw * 30/1440);">PERSONALIZED TEXT TO SPEECH</p>
-            <p style="margin-top: calc(100vw * 12/1440);">We use the TTS modelproposed by Jia et al.[16] to utter the generated textual re-sponse in the target character’s voice and tone. For eachcharacter, the TTS model is finetuned on wave files andutterances collected from that specific character to captureunique speech patterns.</p>
+            <p style="margin-top: calc(100vw * 12/1440);">We use the TTS model proposed by Jia et al. to utter the generated textual response in the target character’s voice and tone. For each character, the TTS model is finetuned on wave files and utterances collected from that specific character to capture unique speech patterns.</p>
         </div>
         <div class="content" id="4">
             <p style="font-size: calc(100vw * 30/1440);">ACOUSTIC-VISUAL SYNCHRONIZATION</p>
-            <p style="margin-top: calc(100vw * 12/1440);">Utilizing theacoustic-visual synchronization model, we synthesize ourgenerated textual response and corresponding audio to thefinal multimodal response. We adopt the pretrained Pose-Controllable Talking Face Generation Model(PC-AVS) pro-posed by Zhou et al[54]. The identity reference and posereference are randomly selected from the target character’svideo clips and lip movements are synchronized with thewave file generated by the personalized speech synthesismodel. In this way, all generated modalities are aligned andsynthesized to a final multimodal personalized response.</p>
+            <p style="margin-top: calc(100vw * 12/1440);">Utilizing the acoustic-visual synchronization model, we synthesize our generated textual response and corresponding audio to the final multimodal response. We adopt the pretrained Pose-Controllable Talking Face Generation Model(PC-AVS) proposed by Zhou et al. The identity reference and pose reference are randomly selected from the target character’s video clips and lip movements are synchronized with the wave file generated by the personalized speech synthesis model. In this way, all generated modalities are aligned and synthesized to a final multimodal personalized response.</p>
         </div>
     </div>
 </body>

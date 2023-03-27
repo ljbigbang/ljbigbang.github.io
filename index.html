@@ -15,13 +15,22 @@
         body{
             background-color: rgb(243, 237, 237);
         }
+        /* .title_navig_wrap{
+            position: fixed;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            z-index: 5;
+            display: block;
+        }
+        .title_navig_wrap:hover .title_navig{
+            display: block;
+        } */
         .title_navig{
-            position: absolute;
+            position: fixed;
             width: 100%;
             height: calc(100vw * 80/1440);
             background-color: rgba(0, 0, 0, 0.6);
-            z-index: 4;
-            /* visibility: hidden; */
+            z-index: 5;
         }
         .title_navig_logo{
             position: absolute;
@@ -37,7 +46,7 @@
             width: calc(100vw * 90/1440);
             top: calc(100vw * 23/1440);
             left: calc(100vw * 75/1440);
-            z-index: 5;
+            /* z-index: 5; */
         }
         .title_navig_logo2{
             position: absolute;
@@ -46,7 +55,7 @@
             padding: calc(100vw * 20/1440);
             top: 0;
             right: 0;
-            z-index: 5;
+            /* z-index: 5; */
             display: block;
             /* background-image: url("./images/icon_mulu.png"); */
             /* background-repeat: no-repeat; */
@@ -110,7 +119,8 @@
             left: 0;
             z-index: 1;
             width: 100%;
-            height: 80%;
+            height: 185%;
+            /* 注意此功能 */
             background-image: url("./images/bigbang.jpg");
             /* background-position: center center; */
             background-repeat: no-repeat;
@@ -122,7 +132,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 80%;
+            height: 185%;
             z-index: 2;
             background-color: rgba(0, 0, 0, 0.7);
         }
@@ -131,13 +141,14 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 80%;
+            height: 100%;
             z-index: 3;
             text-align: center;
         }
         .box4{
             position: absolute;
-            bottom: 0;
+            top: 55%;
+            /* bottom: 0; */
             left: 0;
             width: 100%;
             height: 40%;
@@ -149,18 +160,27 @@
             /* text-align: center; */
             /* background-color: rgba(0, 157, 255, 0.3); */
         }
-        /* .big_bang{
-            width: 1440px;
-            height: 640px;
-        } */
+        .box5{
+            position: absolute;
+            top: 100%;
+            height: 85%;
+            width: 100%;
+            /* padding-top: 4%; */
+            padding-bottom: 6%;
+            padding-left: 6%;
+            padding-right: 6%;
+
+        }
         .word1{
             font-size: calc(100vw * 70/1440);
             color: white;
+            font-weight: bold;
             margin-top: calc(100vw * 200/1440);
         }
         .word2{
             font-size: calc(100vw * 35/1440);
             color: rgb(184, 179, 179);
+            font-weight: bold;
             margin-top: calc(100vw * 30/1440);
         }
         .options{
@@ -177,6 +197,27 @@
             background-color: rgba(0, 0, 0, 0.75);
             /* text-align: right; */
             /* line-height: 100px; */
+            transition: all 1s;
+            /* justify-content: center; */
+            overflow: hidden;
+        }
+        .options:hover{
+            transform: translateY(calc(100vw * -60/1440));
+        }
+        .options::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: calc(100vw * 300/1440);
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: skewX(45deg) translateX(calc(100vw * 450/1440));
+            /* z-index: 1; */
+            transition: all 0.5s;
+        }
+        .options:hover::before{
+            transform: skewX(45deg) translateX(calc(100vw * -450/1440));
         }
         .options1{
             position: relative;
@@ -189,6 +230,26 @@
             border: calc(100vw * 5/1440) solid white;
             display: inline-block;
             background-color: rgba(0, 0, 0, 0.75);
+            transition: all 1s;
+            overflow: hidden;
+        }
+        .options1:hover{
+            transform: translateY(-60px);
+        }
+        .options1::before{
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: calc(100vw * 300/1440);
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            transform: skewX(45deg) translateX(calc(100vw * 450/1440));
+            /* z-index: 1; */
+            transition: all 0.5s;
+        }
+        .options1:hover::before{
+            transform: skewX(45deg) translateX(calc(100vw * -450/1440));
         }
         span{
             position: absolute;
@@ -210,22 +271,31 @@
             height: 70%;
             width: 45%;
             left: 28%;
-            top: 15%;
+            top: 35%;
         }
     </style>
+    <script src="http://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function get(e){
+            $("html,body").animate({
+                scrollTop:$("#" + e).offset().top - 120},1000);
+        }
+    </script>
 </head>
 <body>
+    <!-- <div class="title_navig_wrap"> -->
     <div class="title_navig">
         <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
         <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
         <div class="title_navig_logo2">
             <img src="./images/icon_mulu.png" alt="">
             <div class="directory">
-                <div class="my_video">OUR VIDEO</div>
+                <div class="my_video" onclick="get(1)">OUR VIDEO</div>
                 <div class="my_blogs">OUR BLOGS</div>
             </div>
         </div>
     </div>
+    <!-- </div> -->
     <div class="box1">
         <!-- <img class="big_bang" src="./bigbang.jpg" alt=""> -->
     </div>
@@ -251,6 +321,10 @@
             <div class="images"><img src="./images/shiyan.png" alt=""></div>
             <span>Experiment</span>
         </a>
+    </div>
+    <div class="box5" id="1">
+        <p class="video_title" style=" position: relative; height: 15%; width: 100%; z-index: 5; font-size: calc(100vw * 60/1440); font-weight: bold; color: white; text-align: center;">OUR VIDEO</p>
+        <video style="position: relative; height: 83%; width: 100%; margin-top: 2%; z-index: 5;" src="./images/3137_DPCC_supp.mp4" controls loop></video>
     </div>
 </body>
 </html>

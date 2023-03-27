@@ -24,13 +24,23 @@
             /* background-color: rgba(15, 15, 15, 0.9); */
             /* background-color: white; */
         }
+        .title_navig_wrap{
+            position: fixed;
+            width: 100%;
+            height: calc(100vw * 80/1440);
+            z-index: 5;
+            display: block;
+        }
+        .title_navig_wrap:hover .title_navig{
+            display: block;
+        }
         .title_navig{
             position: fixed;
             width: 100%;
             height: calc(100vw * 80/1440);
             background-color: rgba(0, 0, 0, 0.6);
             z-index: 4;
-            /* visibility: hidden; */
+            display: none;
         }
         .title_navig_logo{
             position: absolute;
@@ -206,7 +216,7 @@
             margin-left:  calc(100vw * 150/1440);
             margin-bottom:  calc(100vw * 100/1440);
             margin-right:  calc(100vw * 150/1440);
-            padding: calc(100vw * 50/1440);
+            padding: calc(100vw * 70/1440);
             border-radius: calc(100vw * 25/1440);
             /* margin: calc(100vw * 100/1440),calc(100vw * 220/1440),calc(100vw * 100/1440),calc(100vw * 220/1440); */
             background-color: rgb(245, 245, 245);
@@ -303,16 +313,18 @@
     </script>
 </head>
 <body>
+    <div class="title_navig_wrap">
     <div class="title_navig">
         <img class="title_navig_logo" src="./images/QH_LOGO.png" alt="">
         <img class="title_navig_logo1" src="./images/QH_LOGO2.png" alt="">
         <div class="title_navig_logo2">
             <img src="./images/icon_mulu.png" alt="">
             <div class="directory">
-                <div class="my_video">OUR VIDEO</div>
+                <div class="my_video" onClick="window.location.href = './index.html'; window.event.returnValue = false;">OUR VIDEO</div>
                 <div class="my_blogs">OUR BLOGS</div>
             </div>
         </div>
+    </div>
     </div>
     <div class="head">
         <div class="section_title">Introduction</div>
@@ -336,53 +348,55 @@
         <span class="main">
             <div class="theme_title">ABSTRACT</div>
             <div class="content">
-                <p> Imagine an interesting multimodal interactive scenariothat you can see, hear, and chat with an AI-generated digi-tal character, who is capable of behaving like Sheldon fromThe Big Bang Theory, as a DEEP copy from appearanceto personality. Towards this fantastic multimodal chattingscenario, we propose a novel task, named Deep Personal-ized Character Creation (DPCC): creating multimodal chatpersonalized characters from multimodal data such as TVshows. Specifically, given a single- or multi-modality in-put (text, audio, video), the goal of DPCC is to generate amulti-modality (text, audio, video) response, which shouldbe well-matched the personality of a specific character suchas Sheldon, and of high quality as well.</p>
+                <p> Imagine an interesting multimodal interactive scenario that you can see, hear, and chat with an AI-generated digital character, who is capable of behaving like Sheldon from The Big Bang Theory, as a DEEP copy from appearance to personality. Towards this fantastic multimodal chatting scenario, we propose a novel task, named Deep Personalized Character Creation (DPCC): creating multimodal chat personalized characters from multimodal data such as TV shows. Specifically, given a single- or multi-modality input (text, audio, video), the goal of DPCC is to generate a multi-modality (text, audio, video) response, which should be well-matched the personality of a specific character such as Sheldon, and of high quality as well.</p>
             </div>
             <div class="content">
-                <p>To support thisnovel task, we further collect a character centric multi-modal dialogue dataset, named Deep Personalized Char-acter Dataset (DPCD), from TV shows. DPCD containscharacter-specific multimodal dialogue data of 10k utter-ances and 6 hours of audio/video per character, whichis around 10 times larger compared to existing relateddatasets. On DPCD, we present a baseline method for theDPCC task and create 5 Deep personalized digital Charac-ters (DeepCharacters) from Big Bang TV Shows. We con-duct both subjective and objective experiments to evaluatethe multimodal response from DeepCharacters in terms ofcharacterization and quality. The results demonstrates that,on our collected DPCD dataset, the proposed baseline cancreate personalized digital characters for generating multi-modal response. </p>
+                <p>To support this novel task, we further collect a character centric multimodal dialogue dataset, named Deep Personalized Character Dataset (DPCD), from TV shows. DPCD contains character-specific multimodal dialogue data of 10k utterances and 6 hours of audio/video per character, which is around 10 times larger compared to existing related datasets. On DPCD, we present a baseline method for the DPCC task and create 5 Deep personalized digital Characters (DeepCharacters) from Big Bang TV Shows. We conduct both subjective and objective experiments to evaluate the multimodal response from DeepCharacters in terms of characterization and quality. The results demonstrates that, on our collected DPCD dataset, the proposed baseline can create personalized digital characters for generating multimodal response. </p>
             </div>
         </span>
         <span>
             <div class="theme_title">OUR&nbsp;GOALS</div>
             <div class="content">
-                <p> We expect to interact with an AI-generated per-sonalized character, just feels like interacting with a specificperson, and the AI-generated character can respond to youwith personalized text, voice and facial expression. Insteadof creating a totally factitious character from manual set-tings, in this project, we are heading for a novel setting: cre-ating aDEEPpersonalized specific character from his/herdialog videos providing textual, vocal and visual data. ByDEEP, we mean not only mimicing theoutercharacteristicssuch as appearance and tune, but also theinnercharacteris-tics such as personality. Once we get aDEEPpersonalizedSheldon (DeepSheldon), one can have a multimodal chatwith him and feel like we are really talking to the one youknow from The Big Bang Theory. </p>
+                <p> We expect to interact with an AI-generated personalized character, just feels like interacting with a specific person, and the AI-generated character can respond to you with personalized text, voice and facial expression. Instead of creating a totally factitious character from manual settings, in this project, we are heading for a novel setting: creating a DEEP personalized specific character from his/her dialog videos providing textual, vocal and visual data. By DEEP, we mean not only mimicing the outer characteristics such as appearance and tune, but also the inner characteristics such as personality. Once we get a DEEP personalized Sheldon (DeepSheldon), one can have a multimodal chat with him and feel like we are really talking to the one you know from The Big Bang Theory. </p>
             </div>
         </span>
         <span>
             <div class="theme_title">ABOUT&nbsp;DPCC</div>
             <div class="content">
-                <p>Towards our fantastic goal, we propose a novel task,named Deep Personalized Character Creation (DPCC), as generating a personalized character from the multimodalconversation data including text, audio, and video. DPCC takes the multimodal stimuli asinput, and responds with a personalized multimodal output.Given the same input, different Deep personalized digitalCharacters (DeepCharacters) should provide responses thatwell reflect their individual trait, respectively. With multi-modal response, DeepCharacters can bring more concreteand immersive interactive experience, compared to previ-ous chatbots, which can only provide text or voice response.DPCC can also support text-only input and generate multi-modal response. Also, different from previous personalizedconversation generation tasks, our DPCC doesn’t requireadditional profiles or traits as input to explicitly label per-sonality, and learn the character’s interaction pattern, speak-ing style and personality from conversation contexts.</p>
+                <img style="position: relative; width: 100%; height: 100%;" src="./images/DPCC_process.png" alt="">
+                <p style="margin-top: calc(100vw * 30/1440);">Towards our fantastic goal, we propose a novel task, named Deep Personalized Character Creation (DPCC), as generating a personalized character from the multimodal conversation data including text, audio, and video. DPCC takes the multimodal stimuli as input, and responds with a personalized multimodal output. Given the same input, different Deep personalized digital Characters (DeepCharacters) should provide responses that well reflect their individual trait, respectively. With multimodal response, DeepCharacters can bring more concrete and immersive interactive experience, compared to previous chatbots, which can only provide text or voice response. DPCC can also support text-only input and generate multimodal response. Also, different from previous personalized conversation generation tasks, our DPCC doesn’t require additional profiles or traits as input to explicitly label personality, and learn the character’s interaction pattern, speaking style and personality from conversation contexts.</p>
             </div>
         </span>
         <span>
             <div class="theme_title">ABOUT&nbsp;DPCD</div>
             <div class="content">
-                <p>To support DPCC task, we collect a multimodal conver-sation dataset, named Deep Personalized Character Dataset(DPCD). DPCD containing 5 main characters fromThe BigBang Theory1, and in total 29.75 hours videos and 29k con-versation turns. We only collect the video clips contain-ing characters’ talking face to extract effective facial ex-pression features. Besides, we manually check the auto-alignment between text and audio/video modality. We alsoconduct preprocessing to remove noise in audio. Thoseefforts ensure the collected data is of high quality forDPCC task. There do exist multimodal (text, audio, video)datasets for natural language processing(NLP), audio-visual synchronization (AVS) and speech syn-thesis. These existing multimodal datasets are collected fora general understanding of conversation content, emotion,or general synthesis of speech and talking head that can beapplied to different persons, not for modelling specific char-acters. Consequently, the data for modeling the personalityof a specific character is typically insufficient. For somedatasets, the character labels of conversations are even notprovided. But our DPCD focus on the main charac-ters and can provide almost an order more (9,718 utterancesper character). </p>
+                <p>To support DPCC task, we collect a multimodal conversation dataset, named Deep Personalized Character Dataset(DPCD). DPCD containing 5 main characters from The Big Bang Theory, and in total 29.75 hours videos and 29k conversation turns. We only collect the video clips containing characters’ talking face to extract effective facial expression features. Besides, we manually check the auto-alignment between text and audio/video modality. We also conduct preprocessing to remove noise in audio. Those efforts ensure the collected data is of high quality for DPCC task. There do exist multimodal (text, audio, video) datasets for natural language processing(NLP), audio-visual synchronization (AVS) and speech synthesis. These existing multimodal datasets are collected for a general understanding of conversation content, emotion, or general synthesis of speech and talking head that can be applied to different persons, not for modelling specific characters. Consequently, the data for modeling the personality of a specific character is typically insufficient. For some datasets, the character labels of conversations are even not provided. But our DPCD focus on the main characters and can provide almost an order more (9,718 utterances per character). </p>
             </div>
         </span>
         <span>
             <div class="theme_title">BASELINE&nbsp;&&nbsp;EVALUATION</div>
             <div class="content">
-                <p>We present a baseline solution for DPCC task and cre-ate 5 DeepCharacters from the collected DPCD. To evaluatethe textual and multimodal response from DeepCharactersin terms of characterization and quality, we design some tools to evaluate the characterization quality. Both subjec-tive and objective experimental results demonstrate that theresponse of our created DeepCharacters can well reflect thepersonality of characters, indicating DPCD can be used forDPCC task.</p>
+                <p>We present a baseline solution for DPCC task and create 5 DeepCharacters from the collected DPCD. To evaluate the textual and multimodal response from DeepCharacters in terms of characterization and quality, we design some tools to evaluate the characterization quality. Both subjective and objective experimental results demonstrate that the response of our created DeepCharacters can well reflect the personality of characters, indicating DPCD can be used for DPCC task.</p>
             </div>
         </span>
         <span>
             <div class="theme_title">RELATED&nbsp;WORK</div>
             <div class="content">
-                <p>Modeling personalized conversation has long been acomplicated issue. 
-                    Li et al.[18] address the challenge of per-sona consistency by encoding personas and adding personaembeddings into seq2seq model. They generate persona-specific responses based on the conversations of 13 char-acters from TV seriesFriendsandThe Big Bang Theory.
-                    Based on the persona-based model by Li et al.[18], Xing etal.[45] estimate the OCEAN scores for each speaker to trainpersona embedding.</p>
+                <p>Modeling personalized conversation has long been a complicated issue. 
+                Li et al. address the challenge of persona consistency by encoding personas and adding persona embeddings into seq2seq model. They generate persona-specific responses based on the conversations of 13 characters from TV series Friends and The Big Bang Theory. 
+                Based on the persona-based model by Li et al., Xing et al. estimate the OCEAN scores for each speaker to train persona embedding.</p>
             </div>
             <div class="content">
-                <p>Considering the difficulty and complexity of persona-based conversation modeling, many models rely on extra profile or personality traits to develop a sense of per-sona. 
-                    Mazar ́e et al.[21] define persona as a set of sen-tences representing the personality of the responding agentand train persona-based dialogue models on a large-scalepersona-based dialogue dataset (PCR) extracted from RED-DIT2. 
-                    Zhong et al.[53] further extend PCR with annotatedempathy information. 
-                    Zheng et al.[52] build a persona-based empathetic conversation response selection modelfrom amounts of multi-turn empathetic conversation datawith five personality annotations (i.e.Gender, Age, Loca-tion, Interest Tags, and Self-description) for each speaker.
-                    Wu et al.[44] propose a generative split memory network toincorporate diverse personal information and generate per-sonalized responses based on a personalized dataset PER-CHAT with finer-grained user personal information andcontextual comments. 
-                    Chen et al. [7] build the personalitydetection and emotion recognition model from a Chinesepersonalized dataset CPED with annotations of speakers’personalities, dynamic emotions and dialog actions.</p>
+                <p>Considering the difficulty and complexity of persona-based conversation modeling, many models rely on extra profile or personality traits to develop a sense of persona. 
+                Mazar ́e et al. define persona as a set of sentences representing the personality of the responding agent and train persona-based dialogue models on a large-scale persona-based dialogue dataset (PCR) extracted from RED-DIT2. 
+                Zhong et al. further extend PCR with annotated empathy information. 
+                Zheng et al. build a persona-based empathetic conversation response selection model from amounts of multi-turn empathetic conversation data with five personality annotations (i.e.Gender, Age, Location, Interest Tags, and Self-description) for each speaker.
+                Wu et al. propose a generative split memory network to incorporate diverse personal information and generate personalized responses based on a personalized dataset PERCHAT with finer-grained user personal information and contextual comments. 
+                Chen et al. build the personality detection and emotion recognition model from a Chinese personalized dataset CPED with annotations of speakers’personalities, dynamic emotions and dialog actions.</p>
             </div>
             <div class="content">
-                <p>Constrained by the lack of single speaker’s conversationdata and the complexity of personality modeling, the mod-els listed above mainly focus on personal information con-sistency rather than character consistency, and rely heavilyon detailed profiles. Different from them, we directly train adeep personalized character model from a rather larger vol-ume of multimodal conversation data for a single speaker.Detailed comparisons of our multimodal dataset DPCD tothe related datasets are presented in Table 1 in Section 3.2.</p>
+                <img style="position: relative; width: 100%; height: 100%;" src="./images/DataSet_details_comparison.png" alt="">
+                <p style="margin-top: calc(100vw * 30/1440);">Constrained by the lack of single speaker’s conversation data and the complexity of personality modeling, the models listed above mainly focus on personal information consistency rather than character consistency, and rely heavily on detailed profiles. Different from them, we directly train a deep personalized character model from a rather larger volume of multimodal conversation data for a single speaker. Detailed comparisons of our multimodal dataset DPCD to the related datasets are presented above.</p>
             </div>
         </span>
     </div>
