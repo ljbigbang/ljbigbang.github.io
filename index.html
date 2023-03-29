@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hi Sheldon! Creating Deep Personalized Characters from TV Shows</title>
     <style>
         *{
             margin: 0;
@@ -15,54 +15,39 @@
         body{
             font-size: 0;
         }
-        .navigation{
+        .header,.section1,.section2,.section3{
             position: relative;
-            display: inline-block;
+            width: 100%;
+            display: flex;
+        }
+        .navigation_title,.navigation_section1,.navigation_section2,.navigation_section3{
+            position: relative;
             width: 36.5%;
+            display: inline-block;
             background-color: #95d4eb;
-        }
-        .navigation_title{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 821/1440);
-            /* border-bottom: 1px solid black; */
-        }
-        .navigation_section1,.navigation_section2{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 1642/1440);
-            /* border-bottom: 1px solid black; */
-        }
-        .navigation_section3{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 5747/1440);
+            /* height: calc(100vw * 821/1440); */
             /* border-bottom: 1px solid black; */
         }
         .title1{
-            position: absolute;
+            position: relative;
             width: 80%;
-            height: 25%;
             margin-right: 20%;
-            top: 25%;
-            /* background-color: black; */
+            margin-top: calc(100vw * 220/1440);
             font-family: "Source Sans Pro", Helvetica, sans-serif;
-            font-size: 5rem;
+            font-size: calc(100vw * 80/1440);
             font-weight: 700;
             letter-spacing: -0.05em;
             line-height: 1.1;
-            margin: 0 0 1.5rem 0;
             text-transform: none;
             text-align: right;
         }
         .title2{
-            position: absolute;
+            position: relative;
             width: 80%;
-            height: 15%;
+            margin-top: calc(100vw * 25/1440);
             margin-right: 20%;
-            top: 50%;
             font-family: "Raleway", Helvetica, sans-serif;
-            font-size: 1.1rem;
+            font-size: calc(100vw * 17/1440);
             font-weight: 800;
             letter-spacing: 0.175em;
             line-height: 2.5;
@@ -70,87 +55,64 @@
             text-align: right;
         }
         .title_down{
-            position: absolute;
-            width: 60px;
-            height: 60px;
+            position: relative;
+            width: calc(100vw * 60/1440);
+            height: calc(100vw * 60/1440);
             margin-right: 20%;
-            top: 65%;
-            right: 0;
-            /* background-color: black; */
-            display: inline-block;
-            z-index: 2;
+            margin-top: calc(100vw * 20/1440);
+            float: right;
         }
-        .title_down img,.navigation_section1 a img,.navigation_section2 a img,.navigation_section3 a img{
+        .navigation_section1 a,.navigation_section2 a{
+            position: relative;
+            width: calc(100vw * 60/1440);
+            height: calc(100vw * 60/1440);
+            margin-right: 20%;
+            margin-top: calc(100vw * 20/1440);
+            float: right;
+        }
+        .title_down img,.navigation_section1 a img,.navigation_section2 a img{
             position: absolute;
             width: 100%;
             height: 100%;
-            z-index: 1;
         }
         .navigation_section1 h2,.navigation_section2 h2,.navigation_section3 h2{
-            position: absolute;
+            position: relative;
             width: 80%;
-            height: 10%;
+            /* height: 10%; */
             margin-right: 20%;
-            top: calc(100vw * 70/1440);
+            margin-top: calc(100vw * 70/1440);
             font-family: "Source Sans Pro", Helvetica, sans-serif;
-            font-size: 2.2rem;
+            font-size: calc(100vw * 40/1440);
             font-weight: 800;
             text-align: right;
         }
-        .navigation_section1 a,.navigation_section2 a,.navigation_section3 a{
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            margin-right: 20%;
-            top: calc(100vw * 140/1440);
-            right: 0;
-            /* background-color: black; */
-            display: inline-block;
-            z-index: 2;
-        }
-        .content{
-            position: absolute;
-            display: inline-block;
+        .content_title,.content_section1,.content_section2,.content_section3{
+            position: relative;
             width: 63.5%;
+            display: inline-block;
             background-color: rgb(246, 244, 241);
-            font-size: 0;
-        }
-        .content_title{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 821/1440);
-            /* border-bottom: 1px solid black; */
-        }
-        .content_section1,.content_section2{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 1642/1440);
-            /* border-bottom: 1px solid black; */
-        }
-        .content_section3{
-            position: relative;
-            width: 100%;
-            height: calc(100vw * 5747/1440);
+            /* height: calc(100vw * 821/1440); */
             /* border-bottom: 1px solid black; */
         }
         .content_title p{
-            position: absolute;
+            position: relative;
             width: 100%;
-            height: 20%;
-            top: 6%;
-            padding: 5%;
+            /* height: 20%; */
+            margin-top: calc(100vw * 100/1440);
+            padding: calc(100vw * 20/1440);
             font-family: "Source Sans Pro", Helvetica, sans-serif;
-            font-size: 2.2rem;
+            font-size: calc(100vw * 40/1440);
             font-weight: 700;
             /* letter-spacing: -0.05em; */
             line-height: 1.1;
             text-align: center;
         }
         .content_title video{
-            position: absolute;
+            position: relative;
             width: 90%;
-            height: 70%;
-            margin-top: 11%;
+            /* height: 70%; */
+            margin-top: calc(100vw * 40/1440);
+            margin-bottom: calc(100vw * 160/1440);
             margin-left: 5%;
         }
         .content_section1 p,.content_section2 p,.content_section2 h3,.content_section3 p,.content_section3 h3,.content_section3 h4{
@@ -161,7 +123,7 @@
             /* margin-top: 3%; */
             padding-top: 3%;
             /* margin-bottom: 3%; */
-            font-size: 1.1rem;
+            font-size: calc(100vw * 20/1440);
         }
         .content_section1 img,.content_section2 img,.content_section3 img,.content_section3 video{
             position: relative;
@@ -180,29 +142,21 @@
     </script>
 </head>
 <body>
-    <div class="navigation">
+    <div class="header">
         <div class="navigation_title">
             <h1 class="title1">Hi<br>Sheldon!</h1>
             <p class="title2">Creating Deep Personalized Characters from TV Shows</p>
             <a class="title_down" onclick="get(1)"><img src="./images/xiangxiajixu.png" alt=""></a>
         </div>
-        <div class="navigation_section1" id="1">
-            <h2>Abstract & DataSet</h2>
-            <a onclick="get(2)"><img src="./images/xiangxiajixu.png" alt=""></a>
-        </div>
-        <div class="navigation_section2" id="2">
-            <h2>BaseLine Method</h2>
-            <a onclick="get(3)"><img src="./images/xiangxiajixu.png" alt=""></a>
-        </div>
-        <div class="navigation_section3" id="3">
-            <h2>Evaluation & Results</h2>
-            <!-- <a href="#"><img src="./images/xiangxiajixu.png" alt=""></a> -->
-        </div>
-    </div>
-    <div class="content">
         <div class="content_title">
             <p>Overview Video</p>
             <video src="./images/3137_DPCC_supp.mp4" controls loop></video>
+        </div>
+    </div>
+    <div class="section1">
+        <div class="navigation_section1" id="1">
+            <h2>Abstract & DataSet</h2>
+            <a onclick="get(2)"><img src="./images/xiangxiajixu.png" alt=""></a>
         </div>
         <div class="content_section1">
             <p>We propose a novel task, named Deep Personalized Character Creation (DPCC): creating multimodal chat personalized characters from multimodal data such as TV shows.</p>
@@ -214,19 +168,30 @@
             <img style="width: 44%; margin-left: 5%; margin-right: 1%;" src="./images/WV_W5_R.png" alt="">
             <img style="width: 44%; margin-left: 1%; margin-right: 5%;" src="./images/DPCD_detail_statistics.png" alt="">
             <p>Meanwhile, our videos are specifically cropped to focus on active talking face, excluding other characters and complicated background scenes. Our audios are also elaborately filtered to better capture the speaker’s voice and tone. Our texts are labeled with speaker identity and conversational context, available for further expression and emotion modeling.</p>
-            <p>As we offer sufficient utterance data and conversational data, it is possible to model the character’s speaking manner and interaction habits.</p>
+            <p style="margin-bottom: calc(100vw * 20/1440);">As we offer sufficient utterance data and conversational data, it is possible to model the character’s speaking manner and interaction habits.</p>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="navigation_section2" id="2">
+            <h2>BaseLine Method</h2>
+            <a onclick="get(3)"><img src="./images/xiangxiajixu.png" alt=""></a>
         </div>
         <div class="content_section2">
             <p>On DPCD, we present a baseline method for the DPCC task and create 5 Deep personalized digital Characters (DeepCharacters) from Big Bang TV Shows.</p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/baseline.png" alt="">
-            <h3 style="font-size: 1.5rem;">Multimodal Features Encoding</h3>
+            <h3 style="font-size: calc(100vw * 35/1440);">Multimodal Features Encoding</h3>
             <p>We train a multimodal feature representation model to capture each modality’s distinctive stylistic information. Following MISA, one-dimensional semantic features are previously extracted from each utterance or audio/video clip, then projected into a modality-specific space utilizing feature projection model Ep. Ep is pretrained on a multimodal emotion recognition task for better understanding in multimodal correlation. The textual / acoustic / visual features are encoded by Ep to form multimodal conversation context input ut,a,v.</p>
-            <h3 style="font-size: 1.5rem;">Personalized Textual Response Generation.</h3>
+            <h3 style="font-size: calc(100vw * 35/1440);">Personalized Textual Response Generation.</h3>
             <p>We finetune the pretrained model conversational response generation DialoGPT on a single character’s multimodal conversation context input ut,a,v to model his personalized interaction pattern and speaking style and finally generate the specific character’s possible response to the multimodal input context.</p>
-            <h3 style="font-size: 1.5rem;">Personalized Text to Speech</h3>
+            <h3 style="font-size: calc(100vw * 35/1440);">Personalized Text to Speech</h3>
             <p>We use the TTS model proposed by Jia et al. to utter the generated textual response in the target character’s voice and tone. For each character, the TTS model is finetuned on wave files and utterances collected from that specific character to capture unique speech patterns.</p>
-            <h3 style="font-size: 1.5rem;">Acoustic-Visual Synchronization</h3>
-            <p>Utilizing the acoustic-visual synchronization model, we synthesize our generated textual response and corresponding audio to the final multimodal response. We adopt the pretrained Pose-Controllable Talking Face Generation Model(PC-AVS) proposed by Zhou et al. The identity reference and pose reference are randomly selected from the target character’s video clips and lip movements are synchronized with the wave file generated by the personalized speech synthesis model. In this way, all generated modalities are aligned and synthesized to a final multimodal personalized response.</p>
+            <h3 style="font-size: calc(100vw * 35/1440);">Acoustic-Visual Synchronization</h3>
+            <p style="margin-bottom: calc(100vw * 20/1440);">Utilizing the acoustic-visual synchronization model, we synthesize our generated textual response and corresponding audio to the final multimodal response. We adopt the pretrained Pose-Controllable Talking Face Generation Model(PC-AVS) proposed by Zhou et al. The identity reference and pose reference are randomly selected from the target character’s video clips and lip movements are synchronized with the wave file generated by the personalized speech synthesis model. In this way, all generated modalities are aligned and synthesized to a final multimodal personalized response.</p>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="navigation_section3" id="3">
+            <h2>Evaluation & Results</h2>
         </div>
         <div class="content_section3">
             <p>We conduct both subjective and objective experiments to evaluate the multimodal response from DeepCharacters in terms of characterization and quality. The survey shows that three characters Sheldon, Leonard and Penny, are more impressed and related conclusion should be more reliable.</p>
@@ -234,21 +199,21 @@
             <img style="width: 28%; margin-left: 1.5%; margin-right: 1.5%;" src="./images/DeepPenny_data.png" alt="">
             <img style="width: 28%; margin-left: 1.5%; margin-right: 5%;" src="./images/DeepLeonard_data.png" alt="">
             <p>Since the textual response lays the foundation of multimodal response, and psychologists think that language can express inner thoughts and feelings, so it’s possible to distinguish a specific character according to his/her utterances. Therefore, we conduct experiments on both textual and multimodel ones.</p>
-            <h3 style="font-size: 1.5rem;">Characterization Evaluation</h3>
-            <h4 style="font-size: 1.3rem;">Characterization of textual responses</h4>
+            <h3 style="font-size: calc(100vw * 35/1440);">Characterization Evaluation</h3>
+            <h4 style="font-size: calc(100vw * 25/1440);">Characterization of textual responses</h4>
             <p>Following a previous work on character classification, we use SAGE model to derive weights for words uttered by the characters. Then we use a pretrained basic BERT model to encode the reweighted virtual documents into 128-dimensional embeddings as the final representation of one sample of the given character’s response. We perform t-SNE on these sampled representations from all the 5 characters and 5 DeepCharacters.</p>
             <img src="./images/t-SNE.png" alt="">
             <p>Intriguingly, the clusters of responses DeepCharacters aligns quite well with the ones of the corresponding characters, respectively. This verifies that the created DeepCharacters can generate highly personalized textual responses, well capturing the speaking style and word preference.</p>
             <p>For human evaluation, we randomly select 50 response samples from DeepSheldon, DeepPenny and DeepLeonard respectively, and each is paired with general response generated by DialoGPT as a non-personalized baseline, and response generated by other character model as an untargeted character comparison. Each question is presented to at least3 judges. The judges are asked to rank each response pair for how well the response matches the given material in speaking style, decision-making style and emotion tendency, using a 3-point Likert-like scale following. </p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/RoHE_textual_response.png" alt="">
             <p>All three targeted DeepCharacters gain more preferences over non-personalized DialoGPT and untargeted DeepCharacters, which shows our DeepCharacter’s ability of capturing a specific character’s personality and speaking style.</p>
-            <h4 style="font-size: 1.3rem;">Characterization of multimodal responses</h4>
+            <h4 style="font-size: calc(100vw * 25/1440);">Characterization of multimodal responses</h4>
             <p>We use DialoGPT finetuned on whole DPCD corpus instead of any specific character, and unfinetuned TTS model as the neutral baseline, while the inference of acoustic-visual synchronization model remains the same as DeepCharacter. We randomly select 10 video clips generated by DeepSheldon, DeepLeonard and DeepPenny, respectively. Like PC-AVS, the total 30 video clips, paired with baseline results, are handed to all 30 judges. The judges are asked to rank each multimodal response pair base on how well the response matches the target character in terms of speaking style, tone and identity, considering all three modalities. comprehensively.</p>
             <video style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/Sheldon.mp4" controls loop></video>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/RoHE_multimodal_response.png" alt="">
             <p>All three targeted DeepCharacters gain more preferences over the neutral baseline, which shows our DeepCharacter’s ability of generating characterized multimodal responses.</p>
-            <h3 style="font-size: 1.5rem;">Quality evaluation</h3>
-            <h4 style="font-size: 1.3rem;">Quality of textual responses</h4>
+            <h3 style="font-size: calc(100vw * 35/1440);">Quality evaluation</h3>
+            <h4 style="font-size: calc(100vw * 25/1440);">Quality of textual responses</h4>
             <p>Following DialoGPT, we perform automatic evaluations using several popular standard evaluation metrics, including SacreBLEU and Perplexity. We also use Entropy and Dist-n to evaluate lexical diversity. We calculate automatic evaluation scores for Deep Sheldon, DeepPenny, DeepLeonard, DeepHoward and DeepRaj separately.</p>
             <p>In comparison, we evaluate DialoGPT’s results with the same contexts, as a non-personalized general response. We also finetune DialoGPT on the mixed corpus of these characters, to bridge the performance gap caused by corpus difference and serve as an un-targeted response. We additionally evaluate the lexical diversity and perplexity of the characters’ original corpus, to learn text distribution.</p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/Automatic_evaluation_scores.png" alt="">
@@ -256,14 +221,13 @@
             <p>We also conduct human study to evaluate our model’s ability in generating high quality characterized textual responses. We first evaluate the generated text quality from the views of fluency, context relevant and personalized/emotional degree. The differences between DeepCharacter and DialoGPT in these three criteria are less significant, indicating that our DeepCharacter can generate responses that are as fluent, reasonable, and emotional as DialoGPT.</p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/RoHE_text_equlity.png" alt="">
             <p>The above results demonstrate that our DeepCharacters achieve comparatively high score in lexical diversity, reasonalibity, fluency and emotionality of generated texts.</p>
-            <h4 style="font-size: 1.3rem;">Quality of generated multimodal responses</h4>
+            <h4 style="font-size: calc(100vw * 25/1440);">Quality of generated multimodal responses</h4>
             <p>We conduct user study to evaluate the multimodal quality of the generated videos. The data and experiment settings remain the same with the video characterization user study, and the judges are required to rank each multimodal response pair for the responses’ performance in language fluency, naturalness and realness.</p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/RoHE_multimodal_response.png" alt="">
             <p>All three DeepCharacters gain more preferences over comparative baseline, which confirms our DeepCharacter’s ability of generating high quality multimodal responses. </p>
             <p>To study how the multimodal input affects the response,we take the same textual stimuli mixed with different video/audio context. Instead of generating the same response to the shared text, our model gives different results not only in response to the textual context, but also related to the emotion expressed in the video/audio context.</p>
             <img style="width: 90%; margin-left: 5%; margin-right: 5%;" src="./images/EoDR_multimodal_inputs.png" alt="">
-            <p>Extra modalities can offer more effective information, such as the speaker’s facial expressions, voice or tone, which can better express the speaker’s emotion and will certainly affect natural response generation. Given multimodal inputs, the model can obtain more comprehensive information from the conversation context, thus understanding the character’s interaction pattern and personality better, generating diverse and more personalized responses.</p>
-            <!-- <p style="position: absolute; height: 500px; width: 100%;"></p> -->
+            <p style="margin-bottom: calc(100vw * 40/1440);">Extra modalities can offer more effective information, such as the speaker’s facial expressions, voice or tone, which can better express the speaker’s emotion and will certainly affect natural response generation. Given multimodal inputs, the model can obtain more comprehensive information from the conversation context, thus understanding the character’s interaction pattern and personality better, generating diverse and more personalized responses.</p>
         </div>
     </div>
 </body>
